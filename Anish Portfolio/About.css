@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Caudex', serif;
+}
+
+.wrapper1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(231, 93, 13);
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000; /* Ensure this is higher than the z-index of cards */
+  }
+  
+  #active:checked ~ .wrapper1 {
+    clip-path: circle(75%);
+  }
+  
+  .menu-btn {
+    position: fixed;
+    z-index: 2000; /* Ensure this is higher than the wrapper */
+    right: 20px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    background: black;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #active:checked ~ .menu-btn {
+    background: #fff;
+    color: #4158d0;
+  }
+  
+  #active:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  
+  .wrapper1 ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+  }
+  
+  .wrapper1 ul li {
+    margin: 15px 0;
+  }
+  
+  .wrapper1 ul li a {
+    color: none;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    color: #fff;
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+  }
+  
+  .wrapper1 ul li a:after {
+    position: absolute;
+    content: "";
+    background: #fff;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    border-radius: 50px;
+    transform: scaleY(0);
+    z-index: -1;
+    transition: transform 0.3s ease;
+  }
+  
+  .wrapper1 ul li a:hover:after {
+    transform: scaleY(1);
+  }
+  
+  .wrapper1 ul li a:hover {
+    color: #4158d0;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+
+.text {
+    margin-top: 50px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buttonset1 {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.buttonset1:hover {
+    background-color: #c0392b;
+    color: rgb(0, 0, 0);
+    transform: scale(1.2) translateY(-10px);
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.7);
+}
+
+.buttonset2 {
+    background-color: #3498db;
+    color: white;
+}
+
+.buttonset2:hover {
+    background-color: #2980b9;
+    color: rgb(0, 0, 0);
+    transform: scale(1.2) translateY(-10px);
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
+}
+
+.buttonset3 {
+    background-color: #f1c40f;
+    color: white;
+}
+.buttonset3:hover {
+    background-color: #f39c12;
+    color: rgb(0, 0, 0);
+    transform: scale(1.2) translateY(-10px);
+    box-shadow: 0 0 20px rgba(241, 196, 15, 0.7);
+}
+
+.buttonset4{
+    background-color: #2ecc71;
+    color: white;
+}
+.buttonset4:hover {
+    background-color: #27ae60;
+    color: rgb(0, 0, 0);
+    transform: scale(1.2) translateY(-10px);
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.7);
+}
+
+#detail {
+    color: rgb(255, 238, 0);
+    font-size: 20px;
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+a:hover #detail {
+    color: rgb(255, 200, 0);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    .text, .text p {
+        font-size: 18px;
+    }
+    .menu-btn {
+        font-size: 30px;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+    }
+    .wrapper1 ul li a {
+        font-size: 24px;
+    }
+    .buttonset1 {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    .buttonset2 {
+      font-size: 14px;
+      padding: 10px 20px;
+  }
+  .buttonset3 {
+    font-size: 14px;
+    padding: 10px 20px;
+}
+.buttonset4 {
+  font-size: 14px;
+  padding: 10px 20px;
+}
+    #languages {
+        margin-top: 50px;
+    }
+}
+
+
+.example-2 {
+
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:40px;
+  }
+  .example-2 .icon-content {
+    margin: 0 10px;
+    position: relative;
+  }
+  .example-2 .icon-content .tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  .example-2 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+  }
+  .example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+  }
+  .example-2 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+  }
+  .example-2 .icon-content a:hover {
+    color: white;
+  }
+  .example-2 .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover .filled {
+    height: 100%;
+  }
+  
+  .example-2 .icon-content a[data-social="linkedin"] .filled,
+  .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+    background-color: #0274b3;
+  }
+  
+  .example-2 .icon-content a[data-social="github"] .filled,
+  .example-2 .icon-content a[data-social="github"] ~ .tooltip {
+    background-color: #24262a;
+  }
+  .example-2 .icon-content a[data-social="instagram"] .filled,
+  .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+    background: linear-gradient(
+      45deg,
+      #405de6,
+      #5b51db,
+      #b33ab4,
+      #c135b4,
+      #e1306c,
+      #fd1f1f
+    );
+  }
+  .example-2 .icon-content a[data-social="youtube"] .filled,
+  .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+    background-color: #ff0000;
+  }
+  

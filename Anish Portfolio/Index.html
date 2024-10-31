@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Anish Kumar</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+</head>
+<body onload="load()">
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+    <div class="wrapper1">
+        <ul>
+            <li><a href="Index.html" target="_self">Home</a></li>
+            <li><a href="About.html" target="_self">About</a></li>
+            <li><a href="skills.html" target="_self">skills</a></li>
+            <li><a href="projects.html" target="_self">Projects</a></li>
+            <li><a href="contact.html" target="_self">Contact</a></li>
+        </ul>
+    </div>
+
+    <video src="index.mp4" style="position: fixed;z-index: -3;width: auto;height: auto;min-width:100%;min-height:100%;top:50%;left:50%;background-position: center;object-fit: cover;transform: translate(-50%,-50%);" autoplay muted loop>
+
+    </video>
+    <div class="container">
+      <div class="neon">Hi I Am Anish Kumar</div>
+      <div class="flux"></div>
+    </div>
+   
+
+
+
+
+
+<!-- For the Typed Function to wor-->
+    <script>
+        function load() {
+            var text = new Typed(".flux", {
+                strings: ["","Passionate Frontend Developer", "Aspiring Fullstack Web Developer", "Coding With Passion","Searching For Oppurtunites"],
+                typeSpeed: 50,
+                backSpeed:100,
+                loop: true
+            });
+        }
+    </script>
+    <br><br>
+ 
+
+</body>
+</html>

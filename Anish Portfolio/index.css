@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+.wrapper1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(231, 93, 13);
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+  z-index: 1000; /* Ensure this is higher than the z-index of cards */
+}
+
+#active:checked ~ .wrapper1 {
+  clip-path: circle(75%);
+}
+
+.menu-btn {
+  position: fixed;
+  z-index: 2000; /* Ensure this is higher than the wrapper */
+  right: 20px;
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  background: black;
+  transition: all 0.3s ease-in-out;
+}
+
+#active:checked ~ .menu-btn {
+  background: #fff;
+  color: #4158d0;
+}
+
+#active:checked ~ .menu-btn i:before {
+  content: "\f00d";
+}
+
+  
+.wrapper1 ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+
+.wrapper1 ul li {
+  margin: 15px 0;
+}
+
+.wrapper1 ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 2vh 5vw; /* Adjust padding for better spacing */
+  color: #fff;
+  position: relative;
+  line-height: 10vh; /* Responsive line height */
+  font-size: 2.4vw; /* Responsive font size */
+  transition: all 0.3s ease;
+}
+.wrapper1 ul li a:after {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 10vh; /* Make height responsive */
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.wrapper1 ul li a:hover:after {
+  transform: scaleY(1);
+}
+.wrapper1 ul li a:hover:after {
+  transform: scaleY(1);
+}
+
+.wrapper1 ul li a:hover {
+  color: #4158d0;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
+.container {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 100vw;
+  height: 100vh; /* Full height */
+}
+
+.neon {
+  margin-top: 5vh; /* Responsive margin */
+  font-family: neon;
+  color: #ffffff;
+  font-size: 8vw; /* Responsive font size */
+  line-height: 8vw; /* Match line height */
+  text-shadow: 0 0 3vw #ffffff;
+}
+
+.flux {
+  font-family: neon;
+  color: #426DFB;
+  font-size: 6vw; /* Responsive font size */
+  line-height: 6vw; /* Match line height */
+  text-shadow: 0 0 3vw #2356FF;
+}
+
+.neon {
+  animation: neon 1s ease infinite;
+}
+
+@keyframes neon {
+  0%, 100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B;
+    color: #806914;
+  }
+}
+
+.flux {
+  animation: flux 2s linear infinite;
+}
+
+@keyframes flux {
+  0%, 100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180;
+    color: #146C80;
+  }
+}
+
+/* Media Queries for additional responsiveness */
+@media (max-width: 767px) {
+  html, body {
+    height: 100%; /* Ensure the body takes full height */
+    margin: 0; /* Remove default margin */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh; /* Full height to center vertically */
+  }
+
+  .neon {
+    font-size: 12vw; /* Larger font size for better visibility */
+    line-height: 12vw; /* Match line height */
+  }
+
+  .flux {
+    font-size: 12vw; /* Larger font size for better visibility */
+    line-height: 12vw; /* Match line height */
+  }
+  .wrapper1 ul li a {
+    font-size: 8vw; /* Adjust font size for smaller screens */
+    line-height: 8vw; /* Match line height to font size */
+    padding: 3vh 6vw; /* Adjust padding for better spacing on smaller screens */
+  }
+
+  .wrapper1 ul li a:after {
+    height: 8vh; /* Adjust height for smaller screens */
+  }
+}
+
+@media screen and (min-width:300px)
+{
+  .wrapper1 ul li a
+  {
+    font-size: 4vh;
+  }
+}
